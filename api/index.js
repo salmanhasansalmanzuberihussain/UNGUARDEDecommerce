@@ -16,7 +16,7 @@ const jwt = require('jsonwebtoken');
 
 mongoose
   .connect(
-    'mongodb+srv://sh8salmanhasan:Hasan732****@cluster0.2dywbrs.mongodb.net/?retryWrites=true&w=majority'
+    'mongodb+srv://sh8salmanhasan:@cluster0.2dywbrs.mongodb.net/?retryWrites=true&w=majority'
   )
   .then(() => {
     console.log('Connected to MongoDB');
