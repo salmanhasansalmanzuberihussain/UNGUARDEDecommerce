@@ -18,13 +18,14 @@ const logoImg = require('../assets/abooj.png');
 const LoginScreen = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [name, setName] = useState('');
   const navigation = useNavigation();
   return (
     <SafeAreaView
       style={{ flex: 1, backgroundColor: 'white', alignItems: 'center' }}
     >
       <View>
-        <Image source={logoImg} style={{ width: 100, height: 100 }} />
+        <Image style={{ width: 100, height: 100 }} source={logoImg} />
       </View>
       <KeyboardAvoidingView>
         <View style={{ alignItems: 'center' }}>
@@ -143,6 +144,7 @@ const LoginScreen = () => {
           style={{ marginTop: 15 }}
         >
           <Text style={{ textAlign: 'center', color: 'gray', fontSize: 16 }}>
+            {' '}
             Don't have an account? Sign Up
           </Text>
         </Pressable>
