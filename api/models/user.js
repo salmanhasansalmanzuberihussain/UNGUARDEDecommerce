@@ -19,7 +19,7 @@ const userSchema = new mongoose.Schema({
     default: false,
   },
   verficiationToken: String,
-  address: [
+  addresses: [
     {
       name: String,
       mobileNo: Strintring,
@@ -31,4 +31,18 @@ const userSchema = new mongoose.Schema({
       postalColde: String,
     },
   ],
+  orders: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Order',
+    },
+  ],
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  },
 });
+
+const User = mongoose.model('User', userSchema);
+
+module.exports = User;
